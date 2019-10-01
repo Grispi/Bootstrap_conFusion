@@ -37,7 +37,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal"> <span class="fa fa-sign-in"></span>Login </a>
+            <a id="login"> <span class="fa fa-sign-in"></span>Login </a>
           </span>
         </div>
       </div>
@@ -209,8 +209,7 @@
             <a
               role="button"
               class="btn btn-block nav-link btn-sm btn-warning "
-              data-toggle="modal"
-              data-target="#reserveTableModal"
+              id="reserveTable"
               data-placement="bottom"
               >Reserve Table</a
             >
@@ -427,6 +426,13 @@
               .children("span")
               .addClass("fa-pause");
           }
+        });
+        $("#login").click(function() {
+          $("#loginModal").modal("toggle");
+        });
+
+        $("#reserveTable").click(function() {
+          $("#reserveTableModal").modal("toggle");
         });
       });
     </script>
